@@ -81,6 +81,17 @@ budget(300); // Expected output: "Current Balance: -$300"
 budget(200); // Expected output: "Current Balance: -$500"
 
 
+//Task 8 - Business Growth Projection
+function calculateGrowth(years, revenue) {      //recursive function calculateGrowth
+    if (years == 10) return console.log(`Projected Revenue: $${revenue.toFixed(2)}`);  //logging revenue.toFixed(2)
+        return calculateGrowth(years + 1, revenue * 1.05)   //return 5% increase until year 10
+    }
+console.log("---Task 8---");
+calculateGrowth(8, 1000); // Expected output: "Projected Revenue: $1102.50"
+calculateGrowth(5, 5000); // Expected output: "Projected Revenue: $6381.41"
+
+
+
 
 
 
