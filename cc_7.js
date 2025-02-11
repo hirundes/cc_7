@@ -35,8 +35,8 @@ calculateLoyaltyDiscount(200, 2); // Expected output: "Discounted Price: $190.00
 //Task 4 - Product Shipping Cost Calculation
 function calculateShippingCost(weight, location, expedited = false) {   //function calculateShippingCost
     let shippingCost = 0;
-    if (location == "USA") shippingCost = 5 + 0.5 * weight;     //location: USA = 5 + 0.5/lb
-    else if (location == "Canada") shippingCost = 10 + 0.7 * weight;    //location: Canada = 10 + 0.7/lb
+    if (location === "USA") shippingCost = 5 + 0.5 * weight;     //location: USA = 5 + 0.5/lb
+    else if (location === "Canada") shippingCost = 10 + 0.7 * weight;    //location: Canada = 10 + 0.7/lb
     if (expedited) shippingCost += 10;      // expedited: += 10
     
     console.log(`Shipping Cost: $${shippingCost.toFixed(2)}`);     //logged shippingCost
@@ -83,7 +83,7 @@ budget(200); // Expected output: "Current Balance: -$500"
 
 //Task 8 - Business Growth Projection
 function calculateGrowth(years, revenue) {      //recursive function calculateGrowth
-    if (years == 10) return console.log(`Projected Revenue: $${revenue.toFixed(2)}`);  //logging revenue.toFixed(2)
+    if (years === 10) return console.log(`Projected Revenue: $${revenue.toFixed(2)}`);  //logging revenue.toFixed(2)
         return calculateGrowth(years + 1, revenue * 1.05)   //return 5% increase until year 10
     }
 console.log("---Task 8---");
