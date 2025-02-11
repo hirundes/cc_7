@@ -1,7 +1,7 @@
 //Task 1 - Customer Invoice Calculation
 function calculateInvoice(subTotal, taxRate, discount) {    //function calculateInvoice
     let total = (subTotal + (subTotal * taxRate)) - discount;    //formula total
-    console.log(`Total Invoice: $${total}`);   //logging total invoice for function
+    console.log(`Total Invoice: $${total.toFixed(2)}`);   //logging total invoice for function
 };
 console.log("---Task 1---");
 calculateInvoice(100, 0.08, 5); // Expected output: "Total Invoice: $103.00"
@@ -24,7 +24,7 @@ const calculateLoyaltyDiscount = (amount, years) => {   //arrow function calcula
     if (years >= 5) loyaltyDiscount = amount * 0.15;    //applying discount with if / else statements
     else if (years >= 3) loyaltyDiscount = amount * 0.10;
     else loyaltyDiscount = amount * 0.05;
-    console.log(`Discounted Price: $${amount - loyaltyDiscount}`);   //logging loyaltyDiscount
+    console.log(`Discounted Price: $${(amount - loyaltyDiscount).toFixed(2)}`);   //logging loyaltyDiscount
 
 };
 console.log("---Task 3---");
@@ -39,7 +39,7 @@ function calculateShippingCost(weight, location, expedited = false) {   //functi
     else if (location == "Canada") shippingCost = 10 + 0.7 * weight;    //location: Canada = 10 + 0.7/lb
     if (expedited) shippingCost += 10;      // expedited: += 10
     
-    console.log(`Shipping Cost: $${shippingCost}`);     //logged shippingCost
+    console.log(`Shipping Cost: $${shippingCost.toFixed(2)}`);     //logged shippingCost
 };
 console.log("---Task 4---");
 calculateShippingCost(10, "USA", true); // Expected output: "Shipping Cost: $20.00"
