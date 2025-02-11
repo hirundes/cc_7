@@ -32,5 +32,20 @@ calculateLoyaltyDiscount(100, 6); // Expected output: "Discounted Price: $85.00"
 calculateLoyaltyDiscount(200, 2); // Expected output: "Discounted Price: $190.00" 
 
 
+//Task 4 - Product Shipping Cost Calculation
+function calculateShippingCost(weight, location, expedited = false) {   //function calculateShippingCost
+    let shippingCost = 0;
+    if (location == "USA") shippingCost = 5 + 0.5 * weight;     //location: USA = 5 + 0.5/lb
+    else if (location == "Canada") shippingCost = 10 + 0.7 * weight;    //location: Canada = 10 + 0.7/lb
+    if (expedited) shippingCost += 10;      // expedited: += 10
+    
+    console.log(`Shipping Cost: $${shippingCost}`);     //logged shippingCost
+};
+console.log("---Task 4---");
+calculateShippingCost(10, "USA", true); // Expected output: "Shipping Cost: $20.00"
+calculateShippingCost(5, "Canada", false); // Expected output: "Shipping Cost: $13.50"
+
+
+
 
 
