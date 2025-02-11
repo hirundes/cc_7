@@ -67,6 +67,22 @@ filterHighValueTransactions(transactions, amount => amount > 1000);
 // Expected output: [1200, 3000, 2200]
 
 
+//Task 7 - Budget Tracker
+function createBudgetTracker() {
+    let totalBudget = 0;
+    return function(budget) {
+        totalBudget -= budget;
+        return console.log(`Current Balance: $${totalBudget}`);
+    }
+};
+console.log("---Task 7---");
+let budget = createBudgetTracker();
+budget(300); // Expected output: "Current Balance: -$300"
+budget(200); // Expected output: "Current Balance: -$500"
+
+
+
+
 
 
 
