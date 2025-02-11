@@ -68,11 +68,11 @@ filterHighValueTransactions(transactions, amount => amount > 1000);
 
 
 //Task 7 - Budget Tracker
-function createBudgetTracker() {
-    let totalBudget = 0;
-    return function(budget) {
-        totalBudget -= budget;
-        return console.log(`Current Balance: $${totalBudget}`);
+function createBudgetTracker() {    //function createBudgetTracker
+    let totalBudget = 0;    //defining totalBudget
+    return function(budget) {       //returns another function(budget)
+        totalBudget -= budget;      
+        return console.log(`Current Balance: $${totalBudget}`);     //logging totalBudget
     }
 };
 console.log("---Task 7---");
